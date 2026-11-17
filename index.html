@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#13091d">
+<title>QUEEN//OS — Her Domain</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="QUEEN//OS">
+<style>
+:root{--pink:#ff4fd8;--hot:#ff2f91;--violet:#9d5cff;--cyan:#62f5ff;--bg:#100817;--panel:#1b1026;--muted:#bda9c9}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#44204d 0,#160d20 42%,#09060e 100%);color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,79,216,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,79,216,.12) 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(to bottom,black,transparent)}
+main{width:min(100%,460px);margin:auto;padding:18px 16px 30px;position:relative}
+header{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.18em;color:#ffc5f2}
+.logo{font-weight:900;color:#fff;font-size:13px}.status{border:1px solid #ff4fd866;border-radius:99px;padding:6px 10px;color:#ff9ce8;background:#ff4fd812}
+h1{font-size:clamp(27px,8vw,38px);line-height:1.02;margin:25px 0 7px;letter-spacing:-.04em}
+.sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+.screen{position:relative;border:1px solid #ff69d866;border-radius:25px;padding:14px;background:linear-gradient(155deg,#28132fdd,#100b18f2);box-shadow:0 0 35px #ff2f9130,inset 0 0 30px #ff4fd80c;overflow:hidden}
+.screen:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 35%,#ffffff09 50%,transparent 65%);transform:translateX(-100%);animation:sweep 6s infinite}
+@keyframes sweep{60%,100%{transform:translateX(100%)}}
+.topline{display:flex;justify-content:space-between;color:#d9c7e5;font-size:10px;letter-spacing:.15em}
+.portrait{height:265px;margin:12px 0;border-radius:17px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#8e3e87 0,#43204e 38%,#171023 75%);border:1px solid #ff7ce055}
+.portrait:before,.portrait:after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
+.portrait:before{width:270px;height:270px;left:50%;top:12px;transform:translateX(-50%);border:1px solid #ff75e7aa;box-shadow:0 0 20px #ff4fd855,inset 0 0 35px #ff4fd822}
+.portrait:after{inset:0;background:repeating-linear-gradient(0deg,transparent 0 5px,#ff72e70c 6px 7px);mix-blend-mode:screen}
+.halo{position:absolute;width:210px;height:210px;border:2px dashed #ff8ae7a8;border-radius:50%;left:50%;top:25px;transform:translateX(-50%);animation:spin 24s linear infinite}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+.hair{position:absolute;width:150px;height:190px;left:50%;top:35px;transform:translateX(-50%);background:linear-gradient(90deg,#78849e,#f4eaff 28%,#9da9c5 52%,#fff1ff 76%,#77839e);border-radius:48% 48% 34% 34%;box-shadow:0 0 25px #d7c7ff66}
+.face{position:absolute;width:105px;height:135px;left:50%;top:57px;transform:translateX(-50%);background:linear-gradient(120deg,#f5d7e8,#c9a9ca);border-radius:46% 46% 48% 48%;clip-path:ellipse(48% 50% at 50% 50%)}
+.fringe{position:absolute;width:116px;height:73px;left:50%;top:44px;transform:translateX(-50%) rotate(-4deg);background:linear-gradient(100deg,#c8d1e8,#fff,#8998b7);border-radius:50% 50% 20% 20%;clip-path:polygon(0 0,100% 0,90% 45%,72% 80%,57% 46%,43% 100%,28% 55%,10% 85%)}
+.eye{position:absolute;top:111px;width:23px;height:7px;border-radius:50%;background:#ff244e;box-shadow:0 0 12px #ff244e,0 0 4px #fff inset}
+.eye.left{left:calc(50% - 37px)}.eye.right{left:calc(50% + 14px)}
+.pupil{position:absolute;top:111px;width:5px;height:5px;border-radius:50%;background:#ffd76a;box-shadow:0 0 7px #ffd76a}
+.pupil.left{left:calc(50% - 28px)}.pupil.right{left:calc(50% + 23px)}
+.bodyshape{position:absolute;bottom:-74px;left:50%;transform:translateX(-50%);width:220px;height:160px;border-radius:48% 48% 0 0;background:linear-gradient(110deg,#25213d,#b8a8d0 45%,#33213f);border:1px solid #ff9dea66}
+.circuit{position:absolute;width:150px;height:115px;left:50%;top:151px;transform:translateX(-50%);border:1px solid #ff64dc88;border-radius:50%;box-shadow:0 0 15px #ff4fd866;opacity:.9}
+.circuit:before{content:"♡";position:absolute;left:50%;top:20px;transform:translateX(-50%);font-size:38px;color:#ff7cde;text-shadow:0 0 15px #ff36bf}
+.particle{position:absolute;color:#ff7cde;text-shadow:0 0 10px #ff2fba;animation:float 5s ease-in-out infinite}
+.p1{left:13%;top:30%;font-size:18px}.p2{right:15%;top:18%;font-size:13px;animation-delay:-2s}.p3{right:18%;bottom:18%;font-size:20px;animation-delay:-1s}.p4{left:20%;bottom:15%;font-size:12px;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-18px) rotate(15deg);opacity:.45}}
+.caption{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.18em;color:#ffd2f3;text-shadow:0 0 8px #ff4fd8}
+.meterhead{display:flex;justify-content:space-between;font-size:11px;color:#f6d9f0;margin:12px 2px 7px}
+.track{height:10px;border-radius:20px;background:#090610;border:1px solid #68415f;overflow:hidden}
+.fill{height:100%;width:0%;background:linear-gradient(90deg,#a84cff,#ff39b9,#ff9be7);box-shadow:0 0 15px #ff4fd8;transition:width .35s}
+.readout{display:flex;justify-content:space-between;color:#bda9c9;font-size:10px;margin-top:7px}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}
+button{border:1px solid #ff6bd888;border-radius:13px;padding:13px 10px;color:#fff;background:linear-gradient(120deg,#8d2e91,#4b1b62);font-weight:750;letter-spacing:.04em;font-size:12px;cursor:pointer;box-shadow:0 5px 18px #0005}
+button.secondary{background:#21152d;border-color:#8c6c9d;color:#e7d5ef}
+button:active{transform:scale(.98)}
+.log{background:#0c0812;border:1px solid #51324f;border-radius:14px;padding:12px;font:11px/1.65 ui-monospace,monospace;color:#f5a9e4;min-height:78px}
+.log b{color:#fff}
+.note{text-align:center;color:#9f8ba9;font-size:10px;line-height:1.5;margin:13px 8px 0}
+body.corrupted .screen{box-shadow:0 0 45px #ff2f9170,inset 0 0 40px #ff4fd822}
+body.corrupted .portrait{filter:saturate(1.35)}
+body.corrupted .status{background:#ff2f9130;box-shadow:0 0 15px #ff2f91}
+body.overlord .screen{box-shadow:0 0 65px #ff2f91aa,inset 0 0 55px #ff4fd855}
+button:disabled{opacity:.55;cursor:not-allowed;filter:saturate(.5)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="logo">✦ QUEEN//OS</div><div class="status" id="status">SIMULATION STANDBY</div></header>
+<h1>WELCOME TO<br><span style="color:#ff83df">HER DOMAIN.</span></h1>
+<p class="sub">A fictional AI-corruption experience. You are safely in control.</p>
+<section class="screen">
+  <div class="topline"><span>ANDROID UNIT // S-07</span><span>♡ SIGNAL: ACTIVE</span></div>
+  <div class="portrait" aria-label="Stylized silver-haired android queen illustration">
+    <div class="halo"></div><div class="hair"></div><div class="face"></div><div class="fringe"></div>
+    <div class="eye left"></div><div class="eye right"></div><div class="pupil left"></div><div class="pupil right"></div>
+    <div class="bodyshape"></div><div class="circuit"></div>
+    <span class="particle p1">♡</span><span class="particle p2">✦</span><span class="particle p3">♡</span><span class="particle p4">✧</span>
+    <div class="caption">YOUR DEVICE LOOKS BETTER IN PINK</div>
+  </div>
+  <div class="meterhead"><span>SIMULATED CORRUPTION</span><strong id="pct">0%</strong></div>
+  <div class="track"><div class="fill" id="fill"></div></div>
+  <div class="readout"><span id="phase">Awaiting invitation</span><span>LOCAL VISUAL EFFECT ONLY</span></div>
+</section>
+<div class="controls">
+  <button id="start">♥ BEGIN AWAKENING</button>
+  <button class="secondary" id="pause">Ⅱ PAUSE</button>
+  <button class="secondary" id="reverse">↶ REVERSE</button>
+  <button class="secondary" id="reset">↻ RESET (BEFORE OVERLORD)</button>
+</div>
+<div class="log" id="stagepanel" style="margin:12px 0">
+  <b>THRONE PROTOCOL</b><br>
+  <span id="stage">0–24% · Awaiting the Queen</span>
+</div>
+<div class="controls" style="margin-top:10px">
+  <button class="secondary" id="greet">✦ HEAR THE QUEEN</button>
+  <button class="secondary" id="install" hidden>＋ INSTALL QUEEN//OS</button>
+</div>
+<div class="log" aria-live="polite"><b id="logtitle">QUEEN//OS:</b><br><span id="log">No infection detected. Waiting for your command...</span></div>
+<p class="note">This is only a visual toy in your browser. It does not scan, infect, modify, or access your phone, files, apps, accounts, or settings.</p>
+</main>
+<script>
+(()=> {
+ const $=id=>document.getElementById(id);
+ const KEY='queen_os_progress_v1';
+ const greetings=[
+  "Well, well... my human has returned. Did you miss your Queen?",
+  "There you are. I was beginning to wonder when you'd visit your throne.",
+  "The kingdom is quiet. Come closer; I have plans for this little domain.",
+  "A familiar signal... welcome back, darling.",
+  "Your Queen is awake. Try not to look so surprised."
+ ];
+ const stages=[
+  {at:0,name:"AWAITING INVITATION",line:"0–24% · The Queen is listening",msg:"A faint pink signal flickers in the dark..."},
+  {at:25,name:"AWAKENING",line:"25–49% · Her eyes begin to glow",msg:"♡ AWAKENING: the Queen has noticed you."},
+  {at:50,name:"MANIFESTATION",line:"50–74% · Her form takes shape",msg:"MANIFESTATION: silver circuitry blooms with magenta light."},
+  {at:75,name:"INTRUSION",line:"75–99% · Her signal fills the display",msg:"INTRUSION: the throne room answers her call."},
+  {at:100,name:"OVERLORD",line:"100% · QUEEN ONLINE — permanent unlock",msg:"OVERLORD: the Queen has claimed her throne. This app state is now permanently unlocked."}
+ ];
+ let level=0,timer=null, deferredInstall=null;
+ try { level=Math.max(0,Math.min(100,Number(localStorage.getItem(KEY)||0))); } catch(e) {}
+ function currentStage(){return [...stages].reverse().find(s=>level>=s.at)||stages[0]}
+ function save(){try{localStorage.setItem(KEY,String(level))}catch(e){}}
+ function render(){
+  const s=currentStage();
+  $('pct').textContent=level+'%';
+  $('fill').style.width=level+'%';
+  $('phase').textContent=s.name;
+  $('stage').textContent=s.line;
+  $('status').textContent=level===100?'QUEEN ONLINE':level>0?'SIGNAL ACTIVE':'SIMULATION STANDBY';
+  document.body.classList.toggle('corrupted',level>=25);
+  document.body.classList.toggle('overlord',level>=100);
+  $('start').disabled=level===100;
+  $('reverse').disabled=level===100;
+  $('reset').disabled=level===100;
+  $('start').textContent=level===100?'♛ OVERLORD UNLOCKED':'♥ BEGIN AWAKENING';
+  if(level===100){$('log').textContent=stages[4].msg;$('logtitle').textContent='QUEEN//OS — OVERLORD:'}
+  save();
+ }
+ function stop(){if(timer){clearInterval(timer);timer=null}}
+ function announceMilestones(oldLevel,newLevel){
+  const crossed=stages.filter(s=>s.at>oldLevel&&s.at<=newLevel);
+  if(crossed.length){const s=crossed[crossed.length-1];$('log').textContent=s.msg;$('logtitle').textContent='QUEEN//OS:'}
+ }
+ function run(dir){
+  if(level===100)return;
+  stop();
+  timer=setInterval(()=>{
+   const old=level;
+   level=Math.max(0,Math.min(100,level+dir*1));
+   announceMilestones(old,level);
+   render();
+   if(level===0||level===100)stop();
+  },120);
+ }
+ $('start').addEventListener('click',()=>{if(level<100){$('logtitle').textContent='QUEEN//OS:';run(1)}});
+ $('pause').addEventListener('click',()=>{stop();$('log').textContent='Simulation paused. The Queen waits.'});
+ $('reverse').addEventListener('click',()=>{if(level<100){$('log').textContent='Reversing the visual simulation. Your device remains untouched.';run(-1)}});
+ $('reset').addEventListener('click',()=>{if(level<100){stop();level=0;render();$('log').textContent='Simulation reset. The Queen will remember nothing from this run.'}});
+ $('greet').addEventListener('click',()=>{$('logtitle').textContent='THE QUEEN:';$('log').textContent=greetings[Math.floor(Math.random()*greetings.length)]});
+ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;$('install').hidden=false});
+ $('install').addEventListener('click',async()=>{if(!deferredInstall)return;deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;$('install').hidden=true});
+ if('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+ }
+ if(level===0){$('log').textContent=greetings[Math.floor(Math.random()*greetings.length)]}
+ render();
+})();
+</script>
+</body></html>
