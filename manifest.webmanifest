@@ -1,18 +1,15 @@
 {
-  "name": "QUEEN//OS \u2014 Her Domain",
+  "id": "./",
+  "name": "QUEEN//OS — Overlord",
   "short_name": "QUEEN//OS",
+  "description": "A fictional neon AI Queen experience.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#100817",
+  "orientation": "portrait",
+  "background_color": "#090610",
   "theme_color": "#13091d",
-  "description": "A fictional neon AI Queen awakening and corruption simulation.",
   "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    {"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
   ]
 }

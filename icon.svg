@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><radialGradient id="g"><stop stop-color="#642b75"/><stop offset="1" stop-color="#100817"/></radialGradient><linearGradient id="p"><stop stop-color="#ff9be7"/><stop offset="1" stop-color="#ff2f91"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="url(#g)"/><circle cx="256" cy="238" r="164" fill="none" stroke="url(#p)" stroke-width="10"/><path d="M130 337 160 170l96 91 96-91 30 167z" fill="none" stroke="#ffe4fa" stroke-width="18" stroke-linejoin="round"/><path d="M180 360h152" stroke="#ff4fd8" stroke-width="16" stroke-linecap="round"/><circle cx="205" cy="277" r="12" fill="#ff9be7"/><circle cx="307" cy="277" r="12" fill="#ff9be7"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#ff4fd8"/><stop offset="1" stop-color="#6421a0"/></linearGradient></defs>
+<rect width="512" height="512" rx="112" fill="#100817"/>
+<path d="M92 355 126 165l103 105 27-135 27 135 103-105 34 190z" fill="url(#g)" stroke="#ffd5f6" stroke-width="14" stroke-linejoin="round"/>
+<path d="M112 390h288" stroke="#ff9be7" stroke-width="24" stroke-linecap="round"/>
+<path d="m256 65 14 30 33 5-24 23 6 33-29-16-29 16 6-33-24-23 33-5z" fill="#fff0a8"/>
+</svg>
